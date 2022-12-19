@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg:#1e272e;
+    --main-color:0097e6
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem =10px */
+}
+.row{
+    margin: 0;
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color:#fff;
+    background-color: var(--main-bg);
+    padding: 1.4rem;
+}
+.navbar a{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+
+.navbar li a:hover{
+    color: blue;
+}
+
+
+.navbar-toggler{
+    background-color: rgb(245, 217, 217);
+    color: black;
+
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite ;
+    color: var(--main-color)
+}
+
+@keyframes rot {
+    0%{
+        transform: rotate3d();
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+/* header */
+.main_header{
+ margin-top: 2rem;
+}
+
+.main_header_left{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+}
+.main_header_left button{
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 1.8rem;
+    box-shadow: -3px 3px #000;
+}
+
+.main_header_left button:hover{
+    transition: all;
+    animation: zoom 0.2s 2 ;
+    
+}
+@keyframes zoom {
+    100%{
+        transform: scale(1.15);
+    }
+    
+}
+.main_header_left .text_clr{
+    color: aqua;
+}
+
+.main_header_right{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    
+}
+
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 4rem;
+}
+
+
+
+/* responsive code */
+@media (max-width:768px)
+{
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main_header_right{
+        height: auto;
+        margin: 3rem 0;
+    }
+
+    .temp-info{
+        width: auto;
+    }
+
+    .temp_form{
+        width: auto;
+    }
+
+    
+    .main-content{
+        width: auto;
+    }
+    
+   
+}
+
+figure img{
+    height: 65vh;
+    filter: drop-shadow(0 0.35rem 0.4rem #000)
+
+}
+
+
+/* weather  */
+
+.box .nameofcity{
+    width: 15rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+
+/* temp details   */
+
+.temp_form input[type="submit"]{
+    color: #009ad8;
+    background-color:#fff;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+   
+}
+
+
+#date{
+    font-size: 1.5rem;
+    background-color: rgb(53, 51, 51);
+  
+
+}
+.temp-info{
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: rgb(52, 51, 51);
+    border-radius: 1rem;
+    /* padding: 1rem; */
+    color: white;
+
+}
+
+.top_layer{
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem ;
+}
+
+.top_layer p{
+    color: white;
+    font-weight: 400;
+    font-size: 1.5rem;
+
+}
+
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.main_layer #city_name{
+  
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+
+}
+
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+
+
+
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+    font-size: 5rem;
+    font-weight: 700;
+
+}
+
+.fa{
+    color: aquamarine;
+}
+
+sup{
+    font-size: 4rem;
+    margin-top: -2rem;
+
+}
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+
+}
+
+.temp_form{
+    width: 40%;
+   
+    position: relative;
+    margin: 10rem auto 6rem;
+    /* line-height: 0.6rem; */
+}
+
+.temp_form input[type="text"]
+{
+    width: 100%;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #1e202b;
+    color: #fff;
+    outline: none;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+    text-align: left;
+
+}
